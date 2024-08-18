@@ -21,6 +21,7 @@ func NewService(clientId string, secret string, url string) *Service {
 		secret: secret,
 		url:    url}
 }
+
 func (service *Service) GetSpotifyAccessToken(rw http.ResponseWriter, r *http.Request) {
 	client := http.Client{}
 	parsedURL, err := url.Parse(service.url)
